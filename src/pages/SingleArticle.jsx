@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { newsContext } from "../Context";
+import ErrorPage from "./ErrorPage";
 
 const SingleArticle = () => {
   const { slug } = useParams();
@@ -12,7 +13,7 @@ const SingleArticle = () => {
   );
 
   if (!article) {
-    return <h2>Articolo non trovato</h2>;
+    return <ErrorPage/>
   }
 
   return (

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { SearchContext } from "../ContextSearch";
 import Loading from "../components/Loading";
+import ErrorPage from "./ErrorPage";
 
 const SingleSearchArticle = () => {
   const { slug } = useParams();
@@ -12,8 +13,12 @@ const SingleSearchArticle = () => {
   );
 
   if (loading) return <Loading />;
-  if (error) return <p>{error}</p>;
-  if (!article) return <p>Articolo non trovato</p>;
+  if (error) return <ErrorPage/>
+  if (!article) return  <div className="flex flex-col items-center px-4">
+  <h1 className="text-2xl font-bold text-center mb-4 pt-4">
+    There has been an error during loading this article, try reloading the page
+  </h1>
+  </div>;
 
   return (
     <div className="flex flex-col px-4 md:px-6 lg:px-8">

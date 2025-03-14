@@ -14,7 +14,7 @@ export const BooksProvider = ({ children }) => {
         const response = await axios.get(BASE_URL);
         setBooks(response.data.results.books);
       } catch (error) {
-        console.log("Errore nel caricamento dei libri:", error);
+        console.log("Error during books loading:", error);
       }
     };
     getBooks();

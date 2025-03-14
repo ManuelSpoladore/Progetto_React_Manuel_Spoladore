@@ -3,6 +3,7 @@ import { SearchContext } from "../ContextSearch";
 import { useLocation } from "react-router-dom";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
+import ErrorPage from "./ErrorPage";
 
 export default function SearchResults() {
   const { results, loading, error, SearchArticles } = useContext(SearchContext);
@@ -17,8 +18,15 @@ export default function SearchResults() {
   }, [query]);
 
   if (loading) return <Loading />;
-  if (error) return <p>{error}</p>;
-  if (!results.length) return <p>No Results</p>;
+  if (error) return <ErrorPage />;
+  if (!results.length)
+    return (
+      <div className="flex flex-col items-center px-4">
+        <h1 className="text-2xl font-bold text-center mb-4 pt-4">
+          No results for: "{query}"
+        </h1>
+      </div>
+    );
 
   return (
     <div className="flex flex-col items-center px-4">
@@ -32,10 +40,14 @@ export default function SearchResults() {
               {/*  titolo */}
               <div className="flex-1 text-left  ">
                 <Link
-                  to={`/singlesearcharticle/${article.headline.main.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/singlesearcharticle/${article.headline.main
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
-                  <h2 className="font-bold text-lg ">{article.headline.main}</h2>
+                  <h2 className="font-bold text-lg ">
+                    {article.headline.main}
+                  </h2>
                   <p>{article.abstract}</p>
                 </Link>
               </div>
