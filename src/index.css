@@ -1,17 +1,10 @@
 @import "tailwindcss";
 
-
 body {
   padding: 15px 150px 0 150px;
 }
 
-/* forse si può togliere */
 @media (max-width: 767px) {
-  /* .footer {
-    display: none;
-  } */
-
-
   body {
     padding: 0;
   }
@@ -149,19 +142,10 @@ body {
 }
 
 .ovl {
-  background-color: rgba(0, 0, 0, 0.5); 
-
-  
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-
 @media (max-width: 415px) {
-  /* .footer {
-    display: none;
-  } */
-
   .responsive-div {
     display: block;
   }
@@ -194,9 +178,6 @@ body {
     object-fit: contain;
   }
 
-  /*  */
-
-  /*  */
   .date-sub {
     white-space: nowrap;
     display: flex;
@@ -216,15 +197,10 @@ body {
 }
 
 .footer {
-    display: none;
-  }
+  display: none;
+}
 
-/* */
 @media (min-width: 410px) and (max-width: 540px) {
-
-  
-
-
   .responsive-div {
     display: block;
   }
@@ -319,6 +295,6 @@ body {
 @media (min-width: 1025px) and (max-width: 1287px) {
   body {
     margin: 10px 10px 0px 10px;
-    padding:0px;
+    padding: 0px;
   }
 }

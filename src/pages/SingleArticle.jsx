@@ -4,9 +4,9 @@ import { newsContext } from "../Context";
 
 const SingleArticle = () => {
   const { slug } = useParams();
-  const { articles } = useContext(newsContext); // Recupera l'array di articoli
+  const { articles } = useContext(newsContext); 
 
-  // Trova l'articolo con lo slug corrispondente
+ 
   const article = articles.find(
     (item) => item.title.replace(/\s+/g, "-").toLowerCase() === slug
   );

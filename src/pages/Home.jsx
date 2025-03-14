@@ -4,14 +4,13 @@ import { newsContext } from "../Context";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 
-
 const Home = () => {
   const { articles } = useContext(newsContext);
 
   if (articles.length === 0) {
-    return <Loading/>;
+    return <Loading />;
   }
-  
+
   return (
     <>
       <div className="container mx-auto px-4">
@@ -26,9 +25,10 @@ const Home = () => {
               <div className="md:w-1/2 p-2">
                 {/* Articolo principale - Primo articolo */}
                 <section className="pb-4 border-b">
-              
                   <Link
-                    to={`/article/${articles[0].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[0].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -40,13 +40,14 @@ const Home = () => {
                         : "Loading..."}
                     </p>
                   </Link>
-                  
                 </section>
 
                 {/* Secondo articolo */}
                 <section className="pb-2 pt-4">
                   <Link
-                    to={`/article/${articles[1].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[1].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -64,7 +65,9 @@ const Home = () => {
               {/* Colonna destra con immagine del primo articolo */}
               <div className="w-full md:w-1/2 p-4 bg-blue-200 flex flex-col justify-end items-end">
                 <Link
-                  to={`/article/${articles[0].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[0].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   {/* Rendering condizionale dell'immagine */}
@@ -72,7 +75,7 @@ const Home = () => {
                     <img
                       src={articles[0].multimedia[0].url}
                       alt="Article Image"
-                      className="pb-2 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-103" // vedere se giusto
+                      className="pb-2 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-103"
                     />
                   ) : (
                     <p>Loading image...</p>
@@ -80,7 +83,7 @@ const Home = () => {
                 </Link>
                 {/* Copyright dell'immagine */}
                 {/* togliere div? */}
-                <div className="bottom-0">  
+                <div className="bottom-0">
                   <p className="text-xs">
                     {articles.length > 0 && articles[0].multimedia
                       ? articles[0].multimedia[0].copyright
@@ -95,7 +98,9 @@ const Home = () => {
               {/* Terzo articolo - solo titolo */}
               <section className="pb-2 sm:pr-4">
                 <Link
-                  to={`/article/${articles[2].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[2].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   <h1 className="font-bold text-sm">
@@ -107,7 +112,9 @@ const Home = () => {
               {/* Quarto articolo - solo titolo */}
               <section className="pb-2  sm:pl-4">
                 <Link
-                  to={`/article/${articles[3].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[3].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   <h1 className="font-bold text-sm lg:border-l lg:pl-4">
@@ -125,7 +132,9 @@ const Home = () => {
                 {/* Quinto articolo */}
                 <section className="pb-4 border-b">
                   <Link
-                    to={`/article/${articles[4].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[4].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -142,7 +151,9 @@ const Home = () => {
                 {/* Sesto articolo */}
                 <section className="pb-2 pt-4">
                   <Link
-                    to={`/article/${articles[5].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[5].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -160,7 +171,9 @@ const Home = () => {
               {/* Colonna destra con immagine del sesto articolo */}
               <div className="w-full md:w-1/2 p-4 bg-blue-200 flex flex-col items-end">
                 <Link
-                  to={`/article/${articles[5].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[5].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   {articles.length > 0 && articles[5].multimedia ? (
@@ -189,7 +202,9 @@ const Home = () => {
               {/* Settimo articolo - solo titolo */}
               <section className="pb-2 sm:pr-4">
                 <Link
-                  to={`/article/${articles[6].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[6].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-#595959]"
                 >
                   <h1 className="font-bold text-sm">
@@ -201,7 +216,9 @@ const Home = () => {
               {/* Ottavo articolo - solo titolo con bordo a sinistra */}
               <section className="pb-2 sm:pl-4 ">
                 <Link
-                  to={`/article/${articles[7].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[7].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   <h1 className="font-bold text-sm lg:border-l lg:pl-4">
@@ -219,7 +236,9 @@ const Home = () => {
                 {/* Nono articolo */}
                 <section className="pb-4 border-b">
                   <Link
-                    to={`/article/${articles[8].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[8].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -236,7 +255,9 @@ const Home = () => {
                 {/* Decimo articolo */}
                 <section className="pb-2 pt-4">
                   <Link
-                    to={`/article/${articles[9].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[9].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -254,7 +275,9 @@ const Home = () => {
               {/* Colonna destra con immagine  */}
               <div className="w-full md:w-1/2 p-4 bg-blue-200 flex flex-col items-end">
                 <Link
-                  to={`/article/${articles[8].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[8].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   {articles.length > 0 && articles[8].multimedia ? (
@@ -283,7 +306,9 @@ const Home = () => {
               {/* Undicesimo articolo  - solo titolo */}
               <section className="pb-2 sm:pr-4">
                 <Link
-                  to={`/article/${articles[10].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[10].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   <h1 className="font-bold text-sm">
@@ -296,8 +321,7 @@ const Home = () => {
               {/* Undicesimo articolo  - solo titolo */}
               <section className="pb-6 pt-6 text-center">
                 <Link
-                  // da sistemare link tip
-                  to={`/article/${articles[0].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to="https://www.nytimes.com/tips"
                   className="hover:text-[#595959]"
                 >
                   <h1 className="text-sm">
@@ -309,7 +333,6 @@ const Home = () => {
               </section>
             </div>
 
-            
             {/* Quarta Tranche */}
             <div className="flex flex-col md:flex-row border-b">
               {/* Colonna sinistra con testo degli articoli */}
@@ -317,7 +340,9 @@ const Home = () => {
                 {/* Dodicesimo articolo */}
                 <section className="pb-4 border-b">
                   <Link
-                    to={`/article/${articles[11].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[11].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -334,7 +359,9 @@ const Home = () => {
                 {/* Tredicesimo articolo */}
                 <section className="pb-2 pt-4">
                   <Link
-                    to={`/article/${articles[12].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[12].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -352,7 +379,9 @@ const Home = () => {
               {/* Colonna destra con immagine del dodicesimo articolo */}
               <div className="w-full md:w-1/2 p-4 bg-blue-200 flex flex-col items-end">
                 <Link
-                  to={`/article/${articles[11].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[11].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   {articles.length > 0 && articles[11].multimedia ? (
@@ -383,7 +412,9 @@ const Home = () => {
                 {/* Quattordicesimo articolo */}
                 <section className="pb-4">
                   <Link
-                    to={`/article/${articles[13].title.replace(/\s+/g, "-").toLowerCase()}`}
+                    to={`/article/${articles[13].title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
                     className="hover:text-[#595959]"
                   >
                     <h1 className="font-bold text-xl">
@@ -396,15 +427,14 @@ const Home = () => {
                     </p>
                   </Link>
                 </section>
-
-                
-               
               </div>
 
               {/* Colonna destra con immagine del Quattordicesimo articolo */}
               <div className="w-full md:w-1/2 p-4 bg-blue-200 flex flex-col items-end">
                 <Link
-                  to={`/article/${articles[13].title.replace(/\s+/g, "-").toLowerCase()}`}
+                  to={`/article/${articles[13].title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
                   className="hover:text-[#595959]"
                 >
                   {articles.length > 0 && articles[13].multimedia ? (
@@ -427,7 +457,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            
           </div>
           {/* Fine della colonna principale sinistra */}
 
@@ -439,7 +468,9 @@ const Home = () => {
             {/* Quindicesimo articolo */}
             <section className="border-b pb-8">
               <Link
-                to={`/article/${articles[14].title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/article/${articles[14].title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}
@@ -471,7 +502,9 @@ const Home = () => {
             {/* Sedicesimo articolo */}
             <section className="border-b pb-8">
               <Link
-                to={`/article/${articles[15].title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/article/${articles[15].title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}
@@ -503,7 +536,9 @@ const Home = () => {
             {/* Diciasettesimo articolo */}
             <section className="border-b pt-3 pb-8">
               <Link
-                to={`/article/${articles[16].title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/article/${articles[16].title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}
@@ -535,7 +570,9 @@ const Home = () => {
 
             <section className="border-b pt-3 pb-8">
               <Link
-                to={`/article/${articles[17].title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/article/${articles[17].title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}
@@ -567,7 +604,9 @@ const Home = () => {
 
             <section className="border-b pt-3 pb-8">
               <Link
-                to={`/article/${articles[18].title.replace(/\s+/g, "-").toLowerCase()}`}
+                to={`/article/${articles[18].title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}

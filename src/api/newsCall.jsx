@@ -6,7 +6,7 @@ export const newsCaller = async () => {
     const response = await apiClient.get("/home.json");
     return response.data.results;
   } catch (error) {
-    console.log("Errore nel fetch:", error);
+    console.log("Fetch Error:", error);
     return [];
   }
 };

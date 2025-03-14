@@ -7,7 +7,6 @@ const SingleSearchArticle = () => {
   const { slug } = useParams();
   const { results, loading, error } = useContext(SearchContext);
 
-  // Trova l'articolo con lo slug corrispondente
   const article = results.find(
     (item) => item.headline.main.replace(/\s+/g, "-").toLowerCase() === slug
   );
