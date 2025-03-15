@@ -1,0 +1,64 @@
+# Niu Iorc Taims
+
+Niu Iorc Taims è un clone del sito del New York Times, sviluppato con React. L'applicazione sfrutta le API del New York Times per recuperare e visualizzare gli articoli presenti nella home page, nella sezione di ricerca e i dati relativi alla sezione libri.
+
+## Tecnologie Utilizzate
+
+- **React**: Framework JavaScript per la costruzione dell'interfaccia utente
+- **API del New York Times**: Per recuperare gli articoli e i dati dei libri
+- **Axios**: Per effettuare le richieste HTTP alle API
+- **React Router**: Per la gestione della navigazione tra le pagine
+- **Styled Components / TailwindCSS** (se utilizzati): Per la gestione dello stile
+
+## Funzionalità Principali
+
+- **Home Page**: Mostra gli articoli principali recuperati tramite API
+- **Ricerca**: Permette di cercare articoli specifici sfruttando l'endpoint di ricerca delle API
+- **Sezione Libri**: Mostra le classifiche dei libri più venduti e altre informazioni correlate
+
+## Installazione
+
+1. Clona il repository:
+   ```sh
+   git clone https://github.com/tuo-utente/NiuIorcTaims.git
+   ```
+2. Accedi alla cartella del progetto:
+   ```sh
+   cd NiuIorcTaims
+   ```
+3. Installa le dipendenze:
+   ```sh
+   npm install
+   ```
+4. Crea un file `.env` nella root del progetto e aggiungi la tua chiave API del New York Times:
+   ```env
+   REACT_APP_NYT_API_KEY=la-tua-api-key
+   ```
+5. Avvia l'applicazione:
+   ```sh
+   npm start
+   ```
+
+## Deployment
+
+Per effettuare il deployment su GitHub Pages o un altro servizio di hosting:
+```sh
+npm run build
+```
+Poi segui le istruzioni del servizio di hosting scelto.
+
+## Contributi
+
+Se vuoi contribuire al progetto:
+- Fai un fork del repository
+- Crea un nuovo branch per la tua feature o fix
+- Manda una pull request
+
+## Licenza
+
+Questo progetto è distribuito sotto licenza MIT.
+
+---
+
+**Autore:** Manuel Spoladore | Contatti / https://github.com/ManuelSpoladore https://www.linkedin.com/in/manuel-spoladore/
+
