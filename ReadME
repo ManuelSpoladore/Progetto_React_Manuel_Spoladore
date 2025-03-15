@@ -14,7 +14,8 @@ Niu Iorc Taims è un clone del sito del New York Times, sviluppato con React. L'
 
 - **Home Page**: Mostra gli articoli principali recuperati tramite API
 - **Ricerca**: Permette di cercare articoli specifici sfruttando l'endpoint di ricerca delle API
-- **Sezione Libri**: Mostra le classifiche dei libri più venduti e altre informazioni correlate
+- **Singolo Articolo**: Permette di accedere al singolo articolo, sia dell'homepage sia della ricerca
+- **Sezione Libri**: Mostra le classifiche dei libri nonfiction più venduti 
 
 ## Installazione
 
