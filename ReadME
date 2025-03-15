@@ -8,7 +8,7 @@ Niu Iorc Taims è un clone del sito del New York Times, sviluppato con React. L'
 - **API del New York Times**: Per recuperare gli articoli e i dati dei libri
 - **Axios**: Per effettuare le richieste HTTP alle API
 - **React Router**: Per la gestione della navigazione tra le pagine
-- **Styled Components / TailwindCSS** (se utilizzati): Per la gestione dello stile
+- **TailwindCSS**: Per la gestione dello stile
 
 ## Funzionalità Principali
 
