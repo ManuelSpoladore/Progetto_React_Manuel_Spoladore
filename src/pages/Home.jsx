@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 const Home = () => {
   const { articles } = useContext(newsContext);
 
+
   if (articles.length === 0) {
     return <Loading />;
   }
@@ -604,16 +605,16 @@ const Home = () => {
 
             <section className="border-b pt-3 pb-8">
               <Link
-                to={`/article/${articles[18].title
+                to={`/article/${articles[8].title
                   .replace(/\s+/g, "-")
                   .toLowerCase()}`}
                 className="hover:text-[#595959]"
               >
                 {/* Immagine dell'articolo */}
-                {articles.length > 0 && articles[18].multimedia ? (
+                {articles.length > 0 && articles[8].multimedia ? (
                   <img
                     className="object-cover w-full transition-transform duration-300 ease-in-out transform hover:scale-103"
-                    src={articles[18].multimedia[0].url}
+                    src={articles[8].multimedia[0].url}
                     alt="Article Image"
                   />
                 ) : (
@@ -621,16 +622,16 @@ const Home = () => {
                 )}
                 {/* Copyright dell'immagine */}
                 <p className="text-xs text-[#595959]">
-                  {articles.length > 0 && articles[18].multimedia
-                    ? articles[18].multimedia[0].copyright
+                  {articles.length > 0 && articles[8].multimedia
+                    ? articles[8].multimedia[0].copyright
                     : "Loading..."}
                 </p>
                 {/* Titolo e abstract */}
                 <h1 className="font-bold text-center text-xl">
-                  {articles.length > 0 ? articles[18].title : "Loading..."}
+                  {articles.length > 0 ? articles[8].title : "Loading..."}
                 </h1>
                 <p>
-                  {articles.length > 0 ? articles[18].abstract : "Loading..."}
+                  {articles.length > 0 ? articles[8].abstract : "Loading..."}
                 </p>
               </Link>
             </section>
